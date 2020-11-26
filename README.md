@@ -1,1 +1,6 @@
+# Data
 
+1. `preprocessing.py` is a script that can be used to preprocess data. The expected input is a csv with containing the raw symbol, date, bookValue, marketCap, dividendYield, peRatio, pbRatio, currentRatio, quickRatio, stockPrice, eps, and increasePercent. The preprocessor will remove features that are missing more than 50% of their data, and then removes any samples missing data. It encodes the date into day, month, and year features, and drops any features with a VIF of over 5. Finally, it normalizes the data, and encodes the increase percent. If passed with the categorical option true, the result is encoded with two target variables ('increase' and 'decrease'), where increase is 1 if the stock increased by at least 10%, decrease is 1 if the stock decreased by at least 10%, and both are 0 otherwise -- this is the desired format when running the catnn.py training model. If passed with the categorical option false, the result is recoded with increasePercent equal to 1 if the stock increased by at least 10%, and 0 otherwise -- this is the desired format when running the log.py training model. The processed data is output to a file named `data.csv`.
+    - usage: ```python preprocessing.py original.csv 0```, where original.csv contains the unprocessed data
+    
+2. `original.csv` is the manually downloaded unprocessed data
