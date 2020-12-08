@@ -5,4 +5,4 @@
     
 2. `original.csv` is the manually downloaded unprocessed data
 
-3. `stock-market-data-collection.ipynb` is the Jupiter Notebook that contains the code for collecting the raw dataset, computing the desired financial ratios, and converting the resulting data-frame to a CSV file. Note that the API key for Financial Modeling Prep has been omitted.
+3. `stock-market-data-collection.ipynb` is the Jupiter Notebook that contains the code for collecting the raw dataset, computing the desired financial ratios, and converting the resulting data-frame to a CSV file (called `original.csv` in this repository). Note that the API key for Financial Modeling Prep has been omitted.
